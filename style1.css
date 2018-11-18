@@ -1,0 +1,86 @@
+.navig {
+	background:#1c8adb;
+	padding: 12px;
+	border-bottom: solid black 1px;
+}
+.navig a {
+	float: right;
+	color:#111111;
+	padding: 10px;
+	margin-top: -20px;
+}
+.navig1 {
+	background-color:#DCD8CF;
+	border-bottom: solid black 1px;
+}
+.dropdown {
+	display: inline-block;
+	padding: 10px;
+}
+.dropdown-menu {
+	margin: 10px;
+	margin-top: -10px;
+}
+.dropdown button, .dropdown a {
+	font-family:sans-serif;
+	color:#111111;
+}
+.dropdown button {
+	background-color: #DDDDDD;	
+}
+.navig1 iframe {
+	float: right;
+	margin-right:-130px;
+	margin-top: 10px;
+}
+
+/*textarea za dodavanje novog incidenta, za nedefinisane incidente*/
+textarea
+{
+	display: block;
+	width: 40%;
+	height: 200px;
+	margin-top: 10px;
+	margin-left: 10px;
+	background-color: lightgrey; 
+}
+/* dodati onclick funkciju za prikazivanje textarea*/
+#submit
+{
+	margin-top: 10px;
+	margin-left: 10px;
+}
+/*stavit display: none koji će se prikazati klikom na novi incident*/
+#textarea
+{
+	display: none;
+}
+
+.col-sm-3
+{
+	text-align: center;
+}
+
+#hwproblems
+{
+	text-align: center;
+	display: none;
+}
+
+#swproblems
+{
+	text-align: center;
+	display: none;
+}
+
+#netproblems
+{
+	text-align: center;
+	display: none;
+}
+
+#miscproblems
+{
+	text-align: center;
+	display: none;
+}

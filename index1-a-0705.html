@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Service Desk</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+	<div class="container-fluid">
+	<header>
+		<div class="navig" width="100%">
+
+			<img src="slike/logo.png" width="350px" height="50px">
+			<a href="#"><img src="slike/logout.png" width="40px" height="40px"><br>Log-out</a>
+			<a href="#"><img src="slike/settings.png" width="40px" height="40px"><br>Settings</a>
+			<a href="#"><img src="slike/user.png" width="40px" height="40px"><br>User</a>
+			<a href="#"><iframe src="http://free.timeanddate.com/clock/i67xlw85/n691/tlba58/tct/pct/ahr/avt/tt0/tw0/tm1/tb4" frameborder="0" width="82" height="34" allowTransparency="true"></iframe></a> <!--pomakao sam vrijeme ovdje jer nije moglo pored dropdown menu-ja ispod-->
+
+		</div>
+		<div class="navig1" width="100%"> <!--obrisati kad se naprave kategorije u bootstrapu-->
+			<div class="dropdown">
+    			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Novi incident
+    			<span class="caret"></span></button>
+    			<ul class="dropdown-menu">
+      				<li><a href="#" onclick="prikaziText()">Prijavi incident</a></li>
+    			</ul>
+  			</div>
+  			<div class="dropdown">
+    			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Najcesci incidenti
+    			<span class="caret"></span></button>
+    			<ul class="dropdown-menu">
+      				<li><a href="#">Hardware problem</a></li>
+      				<li><a href="#">Software problem</a></li>
+      				<li><a href="#">Problem sa OS</a></li>
+    			</ul>
+  			</div>
+		</div>
+	</header>
+	<main>
+ 	<div class="row">
+	 	<div class="col-sm-3">
+	 		<button onclick="prikaziHWP()">
+	 		<p>Hardware-ski problemi</p>
+	 		<img style="width: 50%" src="slike/hwicon.png">
+	 		</button>
+	 	</div>
+	  	<div class="col-sm-3">
+	  		<button onclick="prikaziSWP()">
+	  		<p>Software-ski problemi</p>
+	  		<img style="width: 50%" src="slike/swicon.png">
+	  		</button>
+		</div>
+	  	<div class="col-sm-3">
+	  		<button onclick="prikaziNETP()">
+	  		<p>Mrežni problemi</p>
+	  		<img style="width: 50%" src="slike/neticon.png">
+	  		</button>
+	  	</div>
+	  	<div class="col-sm-3">
+	  		<button onclick="prikaziMISCP()">
+	  		<p>Ostali problemi</p>
+	  		<img style="width: 50%" src="slike/miscicon.png">
+	  		</button>
+	  	</div>
+  	</div>
+	<div class="row" id="hwproblems">
+		<div class="col-sm-4">
+			<button>
+			<h4>Problem 1</h4>
+			<p>Lampice na router-u ne rade</p>
+			</button>
+		</div>
+		<div class="col-sm-4">
+			<button>
+			<h4>Problem 2</h4>
+			<p>Power lampica na router-u trepti 1/s</p>
+			</button>
+			</div>
+		<div class="col-sm-4">
+			<button>
+			<h4>Problem 3</h4>
+			<p>Router nema struje</p>
+			</button>
+		</div>
+	</div>
+	<div class="row" id="swproblems">
+		<div class="col-sm-4">
+			<button>
+			<h4>Problem 1</h4>
+			<p>Ne mogu se logovati u router config page</p>
+			</button>
+		</div>
+		<div class="col-sm-4">
+			<button>
+			<h4>Problem 2</h4>
+			<p>Router ne dodjeljuje IP adrese</p>
+			</button>
+			</div>
+		<div class="col-sm-4">
+			<button>
+			<h4>Problem 3</h4>
+			<p>Ne mogu napraviti WiFi mrežu</p>
+			</button>
+		</div>
+	</div>
+	<div class="row" id="netproblems">
+		<div class="col-sm-4">
+			<button>
+			<h4>Problem 1</h4>
+			<p>Coax nema signal prema router-u</p>
+			</button>
+		</div>
+		<div class="col-sm-4">
+			<button>
+			<h4>Problem 2</h4>
+			<p>Download brzina je manja od one deklarisane u paketu</p>
+			</button>
+		</div>
+		<div class="col-sm-4">
+			<button>
+			<h4>Problem 3</h4>
+			<p>Upload brzina je manja od one deklarisane u paketu</p>
+			</button>
+		</div>
+	</div>
+	<div class="row" id="miscproblems">
+		<div class="col-sm-4">
+			<button>
+			<h4>Problem 1</h4>
+			<p>Želim da zamjenim svoj router/modem za noviji model</p>
+			</button>
+		</div>
+		<div class="col-sm-4">
+			<button>
+			<h4>Problem 2</h4>
+			<p>Želim da pređem na drugi internet paket</p>
+			</button>
+		</div>
+		<div class="col-sm-4">
+			<button>
+			<h4>Problem 3</h4>
+			<p>Želim da dokupim dodatni prostor za web hosting</p>
+			</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div id="textarea">
+ 			<textarea></textarea>
+ 			<button id="submit">Submit</button>
+ 		</div>
+	</div>
+	</main>
+	<footer>
+		<div class="footer">
+		
+		</div>
+	</footer>
+	</div>
+
+</body>
+</html>
